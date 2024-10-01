@@ -1,0 +1,111 @@
+<!-- 
+    --The HTML <canvas> element is used to draw graphics via JavaScript.
+    --The <canvas> element is only a container for graphics. You must use JavaScript to actually draw the graphics.
+    --Canvas has several methods for drawing paths, boxes, circles, text, and adding images.
+    --By default, a canvas has no border and no content.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .convas_div{
+            width: 100vw;
+            height: 100vh;
+            background-color: blue;
+            display: grid;
+            place-items: center ;
+        }
+    </style>
+</head>
+<body>
+    <!-- <canvas id="mycanvas" width="200px" height="200px" style="border: 2px solid black ;">     Creating Simple reactangle -->
+
+
+        <div class="convas_div">
+            <canvas id="mycanvas" style="border: 2px solid gold ;">
+
+            </canvas>
+        </div>
+
+
+        <script>
+            //  const canvas = document.getElementById("mycanvas");
+            //  const context = canvas.getContext("2d");  //used to obtain rendering context and drawing function
+            //  context.moveTo(0 , 0 ); // move the path to specified point without creating a line
+            //  context.lineTo(200 , 200 ) ; //   create a point and specified the line path  (first to last)(not create line)
+            //  context.stroke();
+
+         //   (0 , 0)                 (200 ,0 )           Layout of reactangle
+
+
+        //    (0 ,200)               (200 , 200)
+
+
+             
+             //create reactangle
+            //  context.fillRect( 40 , 40 , 80 ,80) ;
+    
+
+
+            // Ping-Pong Game
+            const canvas1 = document.getElementById("mycanvas") ;
+            const context1 = canvas1.getContext("2d") ;                             
+
+            const width = 300 ;
+            const height = 400 ;
+
+            canvas1.width= width ;
+            canvas1.height=height ;
+
+            //paddle dimension
+            const paddlewidth = 50 ;
+            const paddleheight = 10 ;
+
+            canvas1.paddlewidth = paddlewidth ;
+            canvas1.paddleheight = paddleheight ;
+
+            //create reactangle
+            context1.fillStyle = "black" ;
+            context1.fillRect(0 , 0 , width , height) ;
+             
+
+            // paddle
+            context1.fillStyle = "white" ;
+            context1.fillRect( 125 , 10 , paddlewidth , paddleheight ) ; 
+
+            context1.fillStyle = "white" ;
+            context1.fillRect( 125 , height-20 , paddlewidth , paddleheight ) ;
+
+            
+            context1.beginPath() ;
+            context1.setLineDash([6]);
+            context1.moveTo(0 ,height/2 ) ;
+            context1.lineTo (width ,height/2);
+            context1.strokeStyle = "white" ;
+            context1.stroke();
+            
+            //create a circle
+            context1.setLineDash([0]);
+            context1.beginPath();
+            context1.arc(width/2, height/2, 15, 0, 2 * Math.PI);
+            context1.fillStyle = "while";
+            context1.fill();
+            context1.stroke();
+
+            //player score
+            context1.font = "20px Georgia";
+            context1.fillText(10, 10, 180);
+            context1.fillText(20, 10, 230);
+        </script>
+
+    </canvas>
+</body>
+</html>

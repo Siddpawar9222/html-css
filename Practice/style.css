@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 63.5%;
+}
+nav{
+    background-color: antiquewhite;
+    height: 8rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav span{
+     font-size: 2.5rem;
+     text-transform: uppercase;
+     font-weight: 1000;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+nav ul{
+    font-size: 2.2rem;
+}
+nav ul li{
+    padding: 1rem;
+
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+nav ul li a:hover{
+    color: red;
+}

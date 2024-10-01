@@ -1,0 +1,12 @@
+.sp{
+    background-color: rgb(212, 27, 27);
+    color: black;
+}
+.sp{
+    background-color: #ff7180;
+    color: aliceblue;
+}
+.sp{
+    background-color: hsl(hue, saturation, lightness);
+    color:lavender    ;
+}

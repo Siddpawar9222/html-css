@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Annimation_Revision</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        animation-name: trial;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes trial {
+        /* from{
+                background-color: red;
+            }
+            to
+            {
+                background-color: blue;
+            } */
+
+        0% {
+          background-color: red;
+        }
+        25% {
+          background-color: yellow;
+        }
+        50% {
+          background-color: blue;
+        }
+        100% {
+          background-color: green;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>This is me</div>
+  </body>
+</html>

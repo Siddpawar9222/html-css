@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS1</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        header{
+            background-color: purple;
+            width: auto;
+            height: 8vh;
+        }
+        main
+        {  
+            height: 900px;
+            background-color: blue;
+            
+        }
+        .progress{
+            background-color: red;
+            height: 2px;
+            animation: Myannimation 1s ease-in-out 1 ;
+         }
+         @keyframes Myannimation {
+            0%{
+                width: 0;
+            }
+            50%
+            {
+                width: 90vw ;   
+            }
+            100%
+            {
+                width: 100vw;
+            }
+         }
+         @keyframes Myannimation2 {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%
+            {
+                transform: rotate(360deg);
+            }
+         }
+         img{
+            animation: Myannimation2 1s ease-in-out infinite ;
+         }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="progress"></div>
+    </header>
+    <main> 
+        <div class="just"></div>
+        <img src="dragan.jpg" alt="dragan" width="200px" height="200px">
+    </main>
+</body>
+</html>

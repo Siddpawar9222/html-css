@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .container {
+            display: flex;
+            /* flex-direction: row-reverse; */
+            /* flex-wrap: wrap;   */
+             /* flex-wrap: "wrap-reverse"
+             specifies that the flex items will wrap if necessary, in reverse order:  */
+
+            background-color: aqua;
+            height: 150vh;
+            /* justify-content: center; */
+            align-items: center; 
+            align-content: space-between;
+
+        }  
+       .container > div {
+            height: 300px;
+            width: 250px;
+            border: 2px solid yellow;
+        } 
+        .box1 {
+
+            background-color: red ;
+            color: white;
+        }
+
+        .box2 {
+            background-color: black;
+            color: white;
+        }
+
+        .box3 {
+
+            background-color: blue;
+            color: white;
+        }
+
+        .box4 {
+
+            background-color: purple;
+            color: white;
+        }
+
+
+        .container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .block {
+    width: 50px;
+    height: 50px;
+    margin: 10px 0;
+    background-color: lightblue;
+  }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">Box1</div>
+        <div class="box2">Box2</div>
+        <div class="box3">Box3</div>
+        <div class="box4">Box4</div>
+    </div>
+
+
+
+    <div class="container1">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+      </div>
+</body>
+
+</html>
